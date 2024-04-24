@@ -6,7 +6,7 @@ export async function GET(
   { params }: { params: { bbsId: string } }
 ) {
   const bbsId = params.bbsId;
-  const bbsDetailData = await prisma.post.findUnique({
+  const bbsDetailData = await prisma.board.findUnique({
     where: {
       id: parseInt(bbsId),
     },
